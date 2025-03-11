@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LiftupLives|Volunteer</title>
+  <link rel="icon" href="images/logoW.png">
+  <link rel="stylesheet" href="css/Global.css">
+  <style>
+    .scrollable-section{
+      width: 70%;
+      height: 700px;
+      overflow-y: auto;
+      border: 1px solid black;
+      padding: 2px;
+      margin-top: 60px;
+      margin-left: 200px;
+      margin-right: 200px;
+      background-color: white;
+    }
+    .scrollable-section h1,p{
+      margin-left: 20px;
+    }
+    #sub-heading{
+      margin-top: 5px;
+      font-weight: 500;
+      font-family: Poppins;
+      color: black;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .filter-container{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin: 20px;
+      margin-right: 40px;
+    }
+    .filter-container:hover{
+      background-color: blue;
+      transform: scale(1.02);
+    }
+    #sort{
+      padding: 8px;
+      font-size: 14px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      margin-top: -50px;
+    }
+    #sort:hover{
+      border-color: #f0f8ff;
+      background-color: #f0f8ff;
+    }
+    .volunteer-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(300px, 1fr)); /* Ensures 2 columns */
+      gap: 20px;
+      padding: 20px;
+      justify-content: center;
+      width: 100%; /* Ensures it takes full width */
+      max-width: 800px; /* Adjust based on your layout */
+      margin: auto;
+    }
+
+
+    .volunteer-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      width: 350px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .volunteer-card:hover {
+      transform: scale(1.05);
+    }
+
+    .volunteer-card h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .info-boxes {
+      display: flex;
+      justify-content: space-between;
+      margin: 15px 0;
+    }
+
+    .info-box {
+      width: 30%;
+      background:  rgb(231, 229, 229);
+      border-radius: 8px;
+      text-align: left;
+      font-size: 12px;
+    }
+
+    .info-box img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 5px;
+      margin-left: 20px;
+      margin-top: 5px;
+    }
+
+    .card-details {
+      text-align: left;
+      font-size: 14px;
+      color: black;
+      padding-left: 10px;
+      line-height: 1.5;
+    }
+
+    .card-button{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      gap: 10px;
+    }
+
+    .card-button button{
+      flex: 1;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      text-align: center;
+    }
+
+    .project{
+      background-color: rgb(2, 151, 231);
+      color: white;
+    }
+
+    .apply{
+      background-color: rgb(0, 125, 48);
+      color: white;
+    }
+
+    .project:hover{
+      background-color: #007bb5;
+    }
+
+    .apply:hover{
+      background-color: #1dc42e;
+    }
+
+    h1{
+      margin-top: 1%;
+    }
+    h3 img{
+      width: 15px;
+      height: 15px;
+    }
+    .image img{
+      margin-left: 20px;
+      margin-right: 20px;
+      width: 20px;
+      height: 20px;
+    }
+    .image h2{
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+    
+    .review-section {
+      width: 80%;
+      margin: auto;
+      padding: 40px;
+      border-top: 1px solid #ddd;
+    } 
+
+    .overall-rating {
+      text-align: left;
+      margin-bottom: 20px;
+    } 
+
+    .overall-rating h1 {
+      font-size: 48px;
+      color: #2e7d32;
+      margin: 0;
+    }
+
+    .overall-rating p {
+      font-size: 18px;
+      margin: 5px 0;
+    }
+
+    .see-reviews {
+      background: white;
+      border: 1px solid #2e7d32;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .see-reviews:hover{
+      background-color: rgb(207, 205, 205);
+    }
+
+    .recent-reviews {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .review-card {
+      width: 45%;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .review-card h3 {
+      margin: 0;
+    }
+
+    .reviewer {
+      font-size: 14px;
+      color: gray;
+    }
+
+    .submit-review {
+      margin-top: 30px;
+    }
+
+    .emoji-rating {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 80px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .review-buttons {
+      margin-top: 10px;
+    }
+
+    .send-feedback {
+      background: #2e7d32;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .send-feedback:hover{
+      background-color: #07610b;
+    }
+
+    .cancel {
+      background: gray;
+      border: 1px solid gray;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .cancel:hover{
+      background-color: rgb(215, 219, 222);
+    }
+
+    .program-table {
+    width: 100%;
+    margin-top: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #2e7d32;
+      color: white;
+      font-weight: bold;
+    }
+
+    td {
+      background: #f9f9f9;
+    }
+
+    .price-per-day {
+      font-size: 14px;
+      color: gray;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="images/logoW.png" alt="Website Icon">
+      <h1>LiftupLives</h1>
+    </div>
+    <div class="header-right">
+      <a href="profile.html">User Profile</a>
+    </div>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="table.html">Table</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="sitemap.html">Sitemap</a></li>
+      <li><a href="team.html">Team</a></li>
+    </ul>
+  </nav>
+  <div class="scrollable-section">
+    <h1>4 Volunteer programs found</h1><br>
+    <div id="sub-heading">
+      <p>Matching with 1 filter</p>
+      <p>Showing 1 to 4 of 4 results</p>
+      <form method="get" class="filter-container">
+        <select name="sort" id="sort">
+          <option value="most-popular">Most Popular</option>
+          <option value="lowest-price">Lowest Price</option>
+          <option value="highest-price">Highest Price</option>
+        </select>
+      </form>  
+    </div>  <br>
+    <div class="volunteer-wrapper">
+      <div class="volunteer-card">
+          <div class="image">
+            <h2><img src="images/kenya.png" alt="kenya-flag">Childcare in Nairobi</h2>           
+          </div>
+          <img src="images/kenya2.jpeg" alt="program" class="card-image">
+          
+          <div class="info-boxes">
+              <div class="info-box">
+                  <img src="images/book.png" alt="book">
+                  <p>Increases access to education</p>
+              </div>
+              <div class="info-box">
+                  <img src="images/clock.jpg" alt="clock">
+                  <p>4-6 hours volunteering per day</p>
+              </div>
+              <div class="info-box">
+                  <img src="images/money.jpg" alt="money">
+                  <p>Program Fees from $385</p>
+              </div>
+          </div>  
+          <div class="card-details">
+              <p>🕒 Duration: 1 - 12 weeks</p>
+              <p>📅 Programs start on the 1st and 15th of every month</p>
+              <p>📍 Based in preschools, daycare and kindergardens</p>
+              <p>👥 Volunteers age 18+ and famillies</p><br>
+              <div class="program-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Duration</th>
+                            <th>Program Fee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2 weeks</td>
+                            <td>$435 <span class="price-per-day">| $31/day</span></td>
+                        </tr>
+                        <tr>
+                            <td>4 weeks</td>
+                            <td>$850 <span class="price-per-day">| $30/day</span></td>
+                        </tr>
+                        <tr>
+                            <td>8 weeks</td>
+                            <td>$1,600 <span class="price-per-day">| $28/day</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="about">
+              <br><p>Assist in kindergardens and primary schools with up to 100 children per class. Help to run lessons and provide general support wherever it's needed</p>
+            </div>
+          </div>
+          <div class="card-button">
+            <button class="project">VIEW PROJECT</button>
+            <button class="apply">APPLY FOR IT</button>
+          </div>
+      </div>
+      <div class="volunteer-card">
+          <div class="image">
+            <h2><img src="images/srilanka.png" alt="srilanka-flag">Rural Community Development in Sri Lanka</h2>           
+          </div>
+          <img src="images/srilanka1.jpeg" alt="volunteer" class="card-image">
+          
+          <div class="info-boxes">
+              <div class="info-box">
+                  <img src="images/support.jpg" alt="support">
+                  <p>Supports community development</p>
+              </div>
+              <div class="info-box">
+                  <img src="images/clock.jpg" alt="clock">
+                  <p>4-6 hours volunteering per day</p>
+              </div>
+              <div class="info-box">
+                  <img src="images/money.jpg" alt="money">
+                  <p>Program Fees from $390</p>
+              </div>
+          </div>  
+          <div class="card-details">
+              <p>🕒 Duration: 1 - 12 weeks</p>
+              <p>📅 Programs start every first and third Monday of the month</p>
+              <p>📍 Based in rural villages</p>
+              <p>👥 Volunteers aged 16+ and families</p><br>
+              <div class="program-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Duration</th>
+                            <th>Program Fee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2 weeks</td>
+                            <td>$435 <span class="price-per-day">| $31/day</span></td>
+                        </tr>
+                        <tr>
+                            <td>4 weeks</td>
+                            <td>$850 <span class="price-per-day">| $30/day</span></td>
+                        </tr>
+                        <tr>
+                            <td>8 weeks</td>
+                            <td>$1,600 <span class="price-per-day">| $28/day</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>           
+            <div class="about">
+              <br><p>Based in a rural community, this is a rare chance to be part of an authentic traditional culture, helping out on a range of projects including teaching, childcare and renovation.</p>
+            </div>
+          </div>
+          <div class="card-button">
+            <button class="project">VIEW PROJECT</button>
+            <button class="apply">APPLY FOR IT</button>
+          </div>
+      </div>
+    </div>  
+    <div class="volunteer-wrapper">
+      <div class="volunteer-card">
+          <div class="image">
+            <h2><img src="images/tanzania.png" alt="tanzania">Medical in Arusha</h2>           
+          </div>
+          <img src="images/tanzania1.jpeg" alt="volunteer" class="card-image">
+          
+          <div class="info-boxes">
+              <div class="info-box">
+                  <img src="images/medical.png" alt="medic">
+                  <p>Improves health & wellbeing</p>
+              </div>
+              <div class="info-box">
+                  <img src="images/clock.jpg" alt="clock">
+                  <p>4-6 hours volunteering per day</p>
+              </div>
+              <div class="info-box">
+                  <img src="images/money.jpg" alt="money">
+                  <p>Program Fees from $420</p>
+              </div>
+          </div>
+          <div class="card-details">
+              <p>🕒 Duration: 1 - 16 weeks</p>
+              <p>📅 Programs start on the 1st and 15th of every month</p>
+              <p>📍 Based in clinics and hospitals</p>
+              <p>👥 Volunteers aged 18+</p><br><div class="program-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Duration</th>
+                            <th>Program Fee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2 weeks</td>
+                            <td>$435 <span class="price-per-day">| $31/day</span></td>
+                        </tr>
+                        <tr>
+                            <td>4 weeks</td>
+                            <td>$850 <span class="price-per-day">| $30/day</span></td>
+                        </tr>
+                        <tr>
+                            <td>8 weeks</td>
+                            <td>$1,600 <span class="price-per-day">| $28/day</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>           
+            <div class="about">
+              <br><p>Shadow and assist local medical professionals in clinics and hospitals around Arusha. Observe healthcare in a developing country and learn about efficient treatment in an underprivileged community.</p>
+            </div>
+          </div>
+          <div class="card-button">
+            <button class="project">VIEW PROJECT</button>
+            <button class="apply">APPLY FOR IT</button>
+          </div>
+      </div>
+      <div class="volunteer-card">
+          <div class="image">
+            <h2><img src="images/zanzibar.png" alt="zanzibar">NGO Support in Zanzibar</h2>           
+          </div>
+          <img src="images/zanzibar1.jpeg" alt="volunteer" class="card-image">          
+          <div class="info-boxes">
+              <div class="info-box">
+                  <img src="images/support.jpg" alt="support">
+                  <p>Supports community developer</p>
+              </div>
+              <div class="info-box">
+                  <img src="images/clock.jpg" alt="clock">
+                  <p>4-8 hours volunteering per day</p>
+              </div>
+              <div class="info-box">
+                  <img src="images/money.jpg" alt="money">
+                  <p>Program Fees from $590</p>
+              </div>
+          </div>  
+          <div class="card-details">
+              <p>🕒 Duration: 1 - 12 weeks</p>
+              <p>📅 Programs start every Wednesday</p>
+              <p>📍 Based at an NGO in Zanzibar city</p>
+              <p>👥 Volunteers aged 16+</p><br>
+              <div class="program-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Duration</th>
+                            <th>Program Fee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2 weeks</td>
+                            <td>$435 <span class="price-per-day">| $31/day</span></td>
+                        </tr>
+                        <tr>
+                            <td>4 weeks</td>
+                            <td>$850 <span class="price-per-day">| $30/day</span></td>
+                        </tr>
+                        <tr>
+                            <td>8 weeks</td>
+                            <td>$1,600 <span class="price-per-day">| $28/day</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>            
+            <div class="about">
+              <br><p>Provide assistance to a local NGO working on important community and school-based initiatives to empower students who want to upskill in areas of leadership, finance, and management in order to run their own businesses and become self-sufficient.</p>
+            </div>
+          </div>
+          <div class="card-button">
+            <button class="project">VIEW PROJECT</button>
+            <button class="apply">APPLY FOR IT</button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="review-section">
+    <div class="overall-rating">
+        <h1>9.4/10</h1>
+        <p>Exceptional</p>
+        <p>109 reviews</p>
+        <button class="see-reviews">See all 109 reviews</button>
+    </div>
+
+    <div class="recent-reviews">
+        <div class="review-card">
+            <h3>10/10 Excellent</h3>
+            <p>Wir hatten einen tollen 4-tägigen Aufenthalt mit zwei Erwachsenen und drei Kindern im Alter von 6 bis 12 Jahren...</p>
+            <a href="#">See more</a>
+            <p class="reviewer">Daniela G. - Aug 12, 2019</p>
+        </div>
+        <div class="review-card">
+            <h3>10/10 Excellent</h3>
+            <p>We booked for 10 days and found Enrico to be very accommodating. We needed an extra mattress and chair...</p>
+            <a href="#">See more</a>
+            <p class="reviewer">Dr. Jean M B. - Aug 10, 2018</p>
+        </div>
+    </div>
+
+    <div class="submit-review">
+        <h3>Send us your review</h3>
+        <div class="emoji-rating">
+          😍 😊 😐 ☹️ 😭
+        </div>
+        <textarea placeholder="Got suggestions? We'd love to hear them!"></textarea>
+        <div class="review-buttons">
+            <button class="send-feedback">Send Feedback</button>
+            <button class="cancel">Cancel</button>
+        </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inline">
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="pageEditor_ST1.html">Page Editors - Student 1</a></li>
+          <li><a href="validation_ST1.html">Validation Page - Student 1</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Member</h4>
+        <div>Shenan Dimbukkuwalage</div>
+        <div>Hiruna Ranawaka</div>
+        <div>Poornisha Dissanayake</div>
+        <div>Chanduli Gunawardana</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

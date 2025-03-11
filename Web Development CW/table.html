@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LiftupLives|Table</title>
+    <link rel="Icon" href="images/logoW.png">
+    <link rel="stylesheet" href="css/Global.css" />
+    <style>
+      
+      .table-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      table {
+        width: 80%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        border: 10px solid #214358; /* Add a solid border around the table */
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+      }
+
+      th {
+        background-color:black;
+        color: white;
+        font-weight: bold;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      tr:hover {
+        background-color: #f1f1f1;
+      }
+
+      h2 {
+        text-align: center; 
+        font-weight: bold; 
+        margin-top: 20px; 
+        text-decoration: underline;
+      }
+
+      .flag-icon {
+        width: 20px;
+        height: 15px;
+        margin-left: 5px;
+        vertical-align: middle;
+      }
+
+      .logo-icon {
+        width: 30px;
+        height: 30px;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <img src="images/logoW.png" alt="Website Icon" />
+        <h1>LiftupLives</h1>
+      </div>
+      <div class="header-right">
+        <a href="profile.html">User Profile</a>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="table.html">Table</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </nav>
+    <h2>Top 3 Countries with the Highest Poverty Rate</h2>
+
+    <div class="table-container">
+      <table>
+        <thead> <!--group header content in html table-->
+          <tr> <!--tr tag=table row-->
+            <th><!--th tag=table heading-->
+              <img src="images/logoW.png" alt="Logo" class="logo-icon" />
+            </th>
+            <th>
+              South Sudan
+              <img src="images/southsudan.png" alt="South Sudan Flag" class="flag-icon" />
+            </th>
+            <th>
+              Somalia
+              <img src="images/somalia.png" alt="Somalia Flag" class="flag-icon" />
+            </th>
+            <th>
+              Nigeria
+              <img src="images/nigeria.png" alt="Nigeria Flag" class="flag-icon" />
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Corruption <br><a href="https://www.icpc.gov.ng/wp-content/uploads/downloads/2015/03/How-Corruption-Contributes-to-Poverty-Olu-Aina.pdf" target="_parent"> More Information</a></td>     <!--td tag = accessing table cells-->
+            <td>✅</td>
+            <td>-</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td>Lack of Infrastructure</td>
+            <td>-</td>
+            <td>✅</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Climate Change</td>
+            <td>-</td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td>Economic Challenges</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td>Limited Access to Education and Healthcare</td>
+            <td>✅</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Dependency on Agriculture and Rural Economies</td>
+            <td>✅</td>
+            <td>-</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td>Population Growth</td>
+            <td>-</td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td>Poverty Rate <br><a href="https://pip.worldbank.org/country-profiles/ALB" target="_parent"> More Information</a></td>
+            <td>67.33%</td>
+            <td>54.4%</td>
+            <td> 30.86%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer>
+      <div class="footer-inline">
+        <div>
+          <h4>Links</h4>
+          <ul>
+            <li><a href="pageEditor_ST2.html">Page Editor - Student 2</a></li>
+            <li><a href="validation_ST2.html">Validation Page - Student 2</a></li>
+            
+          </ul>
+        </div>
+        <div>
+          <h4>Members</h4>
+          <div>Shenan</div>
+          <div>Hiruna</div>
+          <div>Poornisha</div>
+          <div>Chanduli</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

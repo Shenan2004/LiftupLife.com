@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="4; URL=home.html">
+    <title>LiftUpLives.org</title>
+    <link rel="icon" type="images/png" href="images/logoW.png">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-color:black;
+        
+      }
+      .splash {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: url("images/splashEX.png") no-repeat center center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        flex-direction: column;
+        text-align: center;
+      }
+      .hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .groupnames{
+        overflow: hidden;
+        position: fixed;
+        bottom: 0%;
+        width: 100%;
+        align-items: center;
+        color: white;
+        text-align: center;
+
+      }
+      ol li{
+        display: inline;
+        padding: 10px;
+      }
+      ol{
+        
+        padding: 15px;
+        margin-bottom: 0%;
+        align-items: center;
+      }
+      img{
+        width: 100px;
+        margin-top: 0%; 
+      }
+      .loader{
+        border: 14px solid rgb(255, 255, 255);
+        border-radius: 50%;
+        border-top: 16px solid rgb(0, 0, 0);
+        width: 75px;
+        height: 75px;
+        animation: spin 2s linear infinite;
+      }
+      @keyframes spin{
+        0%{transform: rotate(0deg);}
+        100%{transform: rotate(360deg);}
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="splash" id="splash">
+        <img src="images/logoW.png" alt="logo">
+        <h1><u>Lift Up Lives</u></h1>
+        <h2>Breaking the cycle of poverty by uplifting lives through action and care.</h2><br><br>
+        <div class="loader"></div>
+      </div>
+        <div class="groupnames">
+          <ol>
+            <li>Chanduli</li>
+            <li>Poornisha</li>
+            <li>Hiruna</li>
+            <li>Shenan</li>
+          </ol>
+        </div>
+  </body>
+</html>

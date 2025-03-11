@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiftupLives|Team Page</title>
+    <link rel="icon" type="image/png" href="images/logoW.png">
+    <link rel="stylesheet" href="css/Global.css" >
+    <style>
+        h1 {
+            text-align: center;
+        }
+        
+        .team-container {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 0px;
+            flex-wrap: wrap;
+            background: #f5f5dc;
+            position: relative;
+            z-index: 1;
+            padding-bottom: 200px; 
+            overflow: visible; 
+            min-height: 550px; 
+        }
+
+        .team-member {
+            position: relative;
+            width: 200px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .thumbnail {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s, opacity 0.3s, border 0.3s;
+            border: 3px solid transparent;
+        }
+        .team-member:hover .thumbnail, .team-member:focus .thumbnail {
+            transform: scale(1.05);
+            opacity: 0.8;
+            border: 3px solid #214358;
+            box-shadow: 0 0 15px #214358;
+        }
+        .details {
+            display: none;
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 200px;
+            z-index: 10;
+            font-size: 14px;
+            text-align: left;
+        }
+        .details h2 {
+            font-size: 18px;
+            margin: 0 0 10px 0;
+            color: #214358;
+            border-bottom: 2px solid #214358;
+            padding-bottom: 5px;
+        }
+        .details .role {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .details .tasks {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .details .tasks li {
+            margin-bottom: 5px;
+        }
+        .team-member:hover .details, .team-member:focus .details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .team-member:focus {
+            outline: none; /* Remove default outline */
+        }
+        
+        .team-member:focus .thumbnail {
+            transform: scale(1.05);
+            opacity: 0.8;
+            border: 3px solid #214358;
+            box-shadow: 0 0 15px #214358;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+          <img src="images/logoW.png" alt="Website Icon" >
+          <h1>LiftupLives</h1>
+        </div>
+        <div class="header-right">
+          <a href="profile.html">User Profile</a>
+        </div>
+    </header>
+  
+    <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="table.html">Table</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+    </nav>
+    
+    <h1 style="text-align: center;">Meet Our Team!</h1>
+    
+    <main>
+        <section class="team-container">
+            <div class="team-member" tabindex="0" role="button" aria-expanded="false">
+                <img src="images/student1.jpg" 
+                     alt="Shenan Dimbukkuwalage - Student 1. Splash Screen and Volunteer page" 
+                     class="thumbnail">
+                <div class="details" role="region" aria-label="Details for Shenan Dimbukkuwalage">
+                    <h2>Shenan Dimbukkuwalage</h2>
+                    <p class="role">Student 1</p>
+                    <h3>Responsibilities:</h3>
+                    <ul class="tasks">
+                        <li>Splash Screen Development</li>
+                        <li>Volunteer Page development</li>
+                        <li>Content page development</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="team-member" tabindex="0" role="button" aria-expanded="false">
+                <img src="images/student2.jpg" 
+                     alt="Hiruna Ranawaka - Student 2. Home Page and Table page" 
+                     class="thumbnail">
+                <div class="details" role="region" aria-label="Details for Hiruna Ranawaka">
+                    <h2>Hiruna Ranawaka</h2>
+                    <p class="role">Student 2</p>
+                    <h3>Responsibilities:</h3>
+                    <ul class="tasks">
+                        <li>Home Page development</li>
+                        <li>Website Template design</li>
+                        <li>Table development</li>
+                        <li>Content page development</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="team-member" tabindex="0" role="button" aria-expanded="false">
+                <img src="images/student3.jpg" 
+                     alt="Poornisha Dissanayake - Student 3. Feedback Form and Team Page" 
+                     class="thumbnail">
+                <div class="details" role="region" aria-label="Details for Poornisha Dissanayake">
+                    <h2>Poornisha Dissanayake</h2>
+                    <p class="role">Student 3</p>
+                    <h3>Responsibilities:</h3>
+                    <ul class="tasks">
+                        <li>Feedback Form development</li>
+                        <li>Team Page development</li>
+                        <li>Content page development</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="team-member" tabindex="0" role="button" aria-expanded="false">
+                <img src="images/student4.jpg" 
+                     alt="Chanduli Gunawaradana - Student 4. User Profile and Sitemap" 
+                     class="thumbnail">
+                <div class="details" role="region" aria-label="Details for Chanduli Gunawaradana">
+                    <h2>Chanduli Gunawaradana</h2>
+                    <p class="role">Student 4</p>
+                    <h3>Responsibilities:</h3>
+                    <ul class="tasks">
+                        <li>User Profile development</li>
+                        <li>Sitemap development</li>
+                        <li>Content page development</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-inline">
+            <div>
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="pageEditor_ST3.html">Page Editor - Student 3</a></li>
+                    <li><a href="validation_ST3.html">Validation Page - Student 3</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Members</h4>
+                <ul>
+                    <li>Shenan Dimbukkuwalage</li>
+                    <li>Hiruna Ranawaka</li>
+                    <li>Poornisha Dissanayake</li>
+                    <li>Chanduli Gunawardana</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+   
+</body>
+</html>
