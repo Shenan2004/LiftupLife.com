@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor Student 4 - Chanduli Gunawaradana</title>
+    <link rel="stylesheet" href="css/pageEditor_validator.css">   
+    <link rel="stylesheet" href="css/Global.css">            
+
+</head>
+<body>
+ 
+
+    <header>
+        <div class="header-left">
+          <img src="images/logoW.png" alt="Website Icon" />
+          <h1>LiftupLives</h1>
+        </div>
+        <div class="header-right">
+          <a href="profile.html">User Profile</a>
+        </div>
+      </header>
+
+    <section class="stud">
+        <h2>Chanduli Gunawaradana, Student 04</h2>
+    </section>
+
+    <div class="container">
+        
+        <main>
+
+ 
+
+            <section>
+                <h2 id="userprof">User Profile Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>The User Profile Page is structured using semantic HTML elements such as section, div, h3, ul, and form to enhance accessibility and maintainability. The layout follows a flexbox-based CSS design, ensuring a responsive and visually consistent appearance. The profile section uses an img tag for the avatar, styled with border-radius for a circular effect. Skill bars utilize nested div elements with width set dynamically via inline styles. The availability calendar is created using a grid-based layout, aligning days and highlighting availability. The contact form ensures accessibility with required fields and ARIA attributes. A global CSS file maintains design consistency.</p> 
+                    
+                    <h3>Accessibility</h3>
+                        <p>In the User Profile Page, I addressed accessibility through several techniques to ensure that all users, including those with disabilities, can navigate the page effectively. I used aria-required="true" on essential form fields to indicate which fields are mandatory, improving form navigation for screen reader users. Additionally, I added aria-hidden="true" to decorative elements, such as icons, so that screen readers can ignore them and focus on the content. I also ensured proper heading structure (h3, h4) to create a logical flow of information, enhancing the experience for users relying on screen readers.</p>
+                    
+                    <h3>Link to the validation page</h3> 
+                        <p><a href="validation_ST4.html#userprofval">A link to the validation page</a></p>
+
+                    <h3>Link to the page</h3>
+                        <p><a href="profile.html">A link to the user profile.</a></p>
+            </section>
+
+            <section>
+                <h2 id="sitemap">Sitemap Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>The Sitemap Page uses HTML and CSS to create an interactive and visually organized navigation system. The page is structured with an SVG element, where "a" tags wrap around "g" (group) elements, creating clickable areas that represent different pages on the website. Each "g" group contains "rect" elements for the background and foreground of the navigation buttons, ensuring clear separation and interaction. The text inside "text" tags labels each button, improving accessibility. CSS properties like width, height, and transform are used to control the layout and positioning of the buttons. focusable and tabindex attributes ensure keyboard navigation, enhancing accessibility. The responsive layout is managed by using JavaScript to adjust the SVG size dynamically based on the container's width.</p> 
+
+                    <h3>Accessibility</h3>
+                        <p>To enhance accessibility on the Sitemap Page, I utilized several key techniques. Each a tag includes an aria-label attribute, providing descriptive labels for screen readers, ensuring users with visual impairments understand the navigation options. I also included the role="link" attribute, indicating that these elements are interactive links. The tabindex="0" ensures keyboard users can navigate the page via the Tab key, and focusable="true" is added to SVG elements for better keyboard accessibility. Additionally, each interactive element is wrapped in a g group with a title tag, which provides more descriptive text for assistive technologies.</p>
+
+                    <h3>Link to the validation page</h3> 
+                        <p><a href="validation_ST4.html#sitemapval">A link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> 
+
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="sitemap.html">A link to the sitemap.</a></p>
+            </section>
+
+            <section>
+                <h2 id="content">Content Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>The Content Page was built using HTML for structure and CSS for styling. Key HTML tags such as header, section, and footer were used to organize the page semantically. Headings like h1, h2, and h3 provide a clear content hierarchy, improving readability and accessibility. CSS properties like font-family, color, padding, and margin were applied to ensure proper spacing and legibility. Flexbox was used for layout management, ensuring a responsive design. Images were given a border using border: 2px solid #333 for visual clarity. Overall, the layout is simple, clean, and structured for ease of navigation.</p> 
+
+                    <h3>Accessibility</h3>
+                        <p>The Content Page has been designed with accessibility in mind. Semantic HTML elements such as header, section, and footer provide a logical structure, improving screen reader compatibility. Headings like h1, h2, and h3 ensure content hierarchy and facilitate navigation for users with assistive technologies. Image borders are used to improve visual clarity, and alt attributes are assumed to be present for all images (though not shown in the code). The page is mobile-friendly, and proper contrast between text and background enhances readability for users with visual impairments. Further accessibility considerations such as keyboard navigation could be explored for enhancement.</p>
+
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST4.html#contentVal"> link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="content_ST4.html">A link to the content 4</a></p>
+            </section>
+
+            <section>
+                <h2 id="challenge"> Challenges and Lessons Learned</h2>
+                    <p>During the development of the User Profile, Sitemap, and Content Pages, several challenges arose. One issue was ensuring consistent design across the pages while adhering to the shared global CSS. This was resolved by closely collaborating with team members to adjust and refine the CSS file, ensuring all components aligned properly. Another challenge was ensuring form validation on the User Profile Page, which was initially cumbersome to implement. Through research, the form was successfully integrated using JavaScript for real-time validation. A key lesson learned was the importance of communication and regular updates to maintain cohesion in design and functionality across the website.</p> 
+            </section>
+
+            <section>
+                <h2 id="compliance"> Compliance</h2>
+                    <p>The User Profile, Sitemap, and Content Pages were developed with consideration of Janet regulations governing web page publication. These regulations emphasize accessibility, security, and privacy. For accessibility, we ensured proper use of HTML semantic elements, providing clear structure and alternative text for images. The pages also adhere to WCAG 2.1 guidelines by incorporating keyboard navigation and proper contrast for readability. Security measures, such as form input validation, were implemented to protect user data. Privacy concerns were addressed by avoiding unnecessary data collection and clearly stating any data use policies. These pages reflect a commitment to compliance with Janet's web publishing standards.</p> 
+
+                    
+            </section>
+
+            <section>
+                <h2 id="ref">References</h2>
+                    <ul class="ref">
+                        <li>United Nations. (2020). Sustainable Development Goals. Retrieved from <a href="https://sdgs.un.org/goals">https://sdgs.un.org/goals</a> </li>
+                        <li>United Nations Development Programme (UNDP). (2021). Poverty and the SDGs. Retrieved from <a href="https://www.undp.org/content/undp/en/home/sustainable-development-goals/goal-1-no-poverty.html">https://www.undp.org/content/undp/en/home/sustainable-development-goals/goal-1-no-poverty.html</a></li>
+                        <li>World Bank. (2021). Poverty Overview. Retrieved from <a href="https://www.worldbank.org/en/topic/poverty">https://www.worldbank.org/en/topic/poverty</a></li>
+                        <li>W3C Web Accessibility Initiative (WAI). (2021). Web Content Accessibility Guidelines (WCAG) 2.1. Retrieved from <a href="https://www.w3.org/WAI/WCAG21/quickref/">https://www.w3.org/WAI/WCAG21/quickref/</a></li>
+                        <li>W3C. (2020). HTML5 Specification. Retrieved from <a href="https://www.w3.org/TR/html5/">https://www.w3.org/TR/html5/</a></li>
+                        <li>Mozilla Developer Network (MDN). (2021). HTML Form Validation. Retrieved from <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation">https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation</a></li>
+                        <li>Janet Network. (2022). Web Publishing Guidelines. Retrieved from <a href="https://www.jisc.ac.uk/guides/web-publishing">https://www.jisc.ac.uk/guides/web-publishing</a></li>
+                        <li>Lack of Education Wiki. (2018). A1.jpg [Image]. Retrieved from <a href="https://static.wikia.nocookie.net/lack-of-education/images/1/1f/A1.jpg/revision/latest?cb=20181026061345">https://static.wikia.nocookie.net/lack-of-education/images/1/1f/A1.jpg/revision/latest?cb=20181026061345</a></li>
+                        <li>Hiiraan. (2016). Refugee class in Uganda [Image]. Retrieved from <a href="https://www.hiiraan.com/images/2016/Sept/2016916636095925499497256refugee-class-in-uganda.jpg.size.custom.crop.1086x724.jpg">https://www.hiiraan.com/images/2016/Sept/2016916636095925499497256refugee-class-in-uganda.jpg.size.custom.crop.1086x724.jpg</a></li>
+                        <li>24.com. (n.d.). No job. Retrieved from <a href="https://cdn.24.co.za/files/Cms/General/d/12100/b474e0d2e0d94c4ca3531b40c1d87525.jpg">https://cdn.24.co.za/files/Cms/General/d/12100/b474e0d2e0d94c4ca3531b40c1d87525.jpg</a></li>
+                        <li>Medium. (n.d.). Exploitation. Retrieved from <a href="https://miro.medium.com/v2/resize:fit:1400/1*5RkEag6v_5zLgDHgEcqDzw.jpeg">https://miro.medium.com/v2/resize:fit:1400/1*5RkEag6v_5zLgDHgEcqDzw.jpeg</a></li>
+                        <li>LinkedIn. (n.d.). socialstigma. Retrieved from <a href="https://media.licdn.com/dms/image/v2/C4E12AQEkB9hmwj5vUw/article-cover_image-shrink_600_2000/0/1645506916488?e=2147483647&v=beta&t=hCZ97eff3S8fwtgSH_alf_Z6t-I0BSzEjo5dVFXxMz4">https://media.licdn.com/dms/image/v2/C4E12AQEkB9hmwj5vUw/article-cover_image-shrink_600_2000/0/1645506916488?e=2147483647&v=beta&t=hCZ97eff3S8fwtgSH_alf_Z6t-I0BSzEjo5dVFXxMz4</a></li>
+                        <li>Route Fifty. (2022). Crime scene. Retrieved from <a href="https://cdn.route-fifty.com/media/img/cd/2022/03/12/GettyImages_dv766056-1/860x394.jpg">https://cdn.route-fifty.com/media/img/cd/2022/03/12/GettyImages_dv766056-1/860x394.jpg</a></li>
+                        
+                    
+                    </ul>
+
+            </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+       
+        <aside>
+            <h3>Core pages developed:</h3>
+
+            <ul class="top-level-ul">
+            
+                <li>Student 1</li>
+                    <ul> 
+                        <li><a href="splash.html">Splash page</a></li>
+                        <li><a href="volunteer.html">Volunteer page</a></li>
+                        <li><a href="#content_ST1">Content page</a></li>
+                    </ul>
+                <li>Student 2</li>
+                    <ul>
+                        <li><a href="home.html">Home page </a></li>
+                        <li><a href="table.html">Table page</a></li>
+                        <li><a href="content_ST2">Content page</a></li>
+                    </ul>
+                <li>Student 3</li>
+                    <ul>
+                        <li><a href="feedback.html">Feedback page</a> </li>
+                        <li><a href="team.html">Team page</a></li>
+                        <li><a href="content_ST3">Content page</a></li>
+                    </ul>
+                <li>Student 4</li>
+                    <ul>
+                        <li><a href="profile.html">Profile page </a></li>
+                        <li><a href="sitemap.html">Sitemap page</a></li>
+                        <li><a href="content_ST4.html">Content page</a></li>
+                    </ul>
+                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-inline">
+          <div>
+            <h4>Links</h4>
+            <ul>
+                <li><a href="pageEditor_ST4.html">Page Editor - Student 04</a></li>
+                <li><a href="validation_ST4.html">Validation page - Student 04</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Members</h4>
+            <div>Shenan Dimbukkuwalage</div>
+            <div>Hiruna Ranawaka</div>
+            <div>Poornisha Dissanayake</div>
+            <div>Chanduli Gunawaradana</div>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

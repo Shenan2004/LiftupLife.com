@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiftupLives|Feedback Form</title>
+    <link rel="icon" type="image/png" href="images/logoW.png">
+    <link rel="stylesheet" href="css/Global.css">
+    <style>
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        fieldset {
+            border: 1px solid #ddd;
+            margin-bottom: 25px;
+            padding: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #214358;
+            padding: 0 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #000000;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 60px;
+        }
+
+        button[type="submit"] {
+            background-color: #214358;
+            color: white;
+            padding: 20px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #182e42;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .reset-button {
+            background-color: #214358;
+            color: white;
+            padding: 20px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .reset-button:hover {
+            background-color: #182e42;
+        }
+
+        
+
+        .rating-box { 
+            margin: 20px 0; 
+        }
+        
+        .rating { 
+            display: flex; 
+            gap: 30px;
+            margin-top: 10px;
+        }
+        
+        .emoji { 
+            font-size: 2rem; 
+            background: none; 
+            border: none; 
+            cursor: pointer; 
+            transition: transform 0.2s; 
+        }
+        
+        .emoji:hover { 
+            transform: scale(1.2); 
+        }
+        
+        .emoji:active { 
+            transform: scale(1.1); 
+        }
+
+        .input-box {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .column {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .column .input-box {
+            flex: 1;
+        }
+
+        /* Updated gender styles */
+        
+
+        /* Validation Styles */
+        input:invalid:not(:placeholder-shown),
+        textarea:invalid:not(:placeholder-shown) {
+            border: 2px solid #ff0000;
+            background-color: #fff0f0;
+        }
+
+        .error-message {
+            color: #ff0000;
+            font-size: 0.8em;
+            margin-top: 5px;
+            display: none;
+        }
+
+        input:invalid:not(:placeholder-shown) + .error-message {
+            display: block;
+        }
+
+        .required {
+            color: #ff0000;
+        }
+
+        /* Additional spacing fixes */
+        select {
+            margin-bottom: 15px;
+        }
+
+        .input-box:last-child {
+            margin-bottom: 0;
+        }
+
+        #charCount {
+            font-size: 0.8em;
+            color: #666;
+            margin-top: 5px;
+        }
+        .radio-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        .radio-group label {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <img src="images/logoW.png" alt="Website Icon" >
+            <h1>LiftupLives</h1>
+        </div>
+        <div class="header-right">
+            <a href="profile.html">User Profile</a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="table.html">Table</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+            <li><a href="team.html">Team</a></li>
+        </ul>
+    </nav>
+
+    <form action="#" method="post" id="feedbackForm">
+        <fieldset>
+            <legend><h2>Personal Details</h2></legend>
+            
+            <!-- Name field - Required -->
+            <div class="input-box">
+                <label for="fullName">Enter your name <span class="required">*</span></label>
+                <input type="text" 
+                       id="fullName"
+                       name="name" 
+                       placeholder="Enter your full name" 
+                       required 
+                       pattern="[A-Za-z ]{3,}"
+                       title="Please enter a valid name (minimum 3 letters)">
+                <span class="error-message">Please enter a valid name (minimum 3 letters)</span>
+            </div>
+
+            <!-- Email field - Required -->
+            <div class="input-box">
+                <label for="email">Enter your email <span class="required">*</span></label>
+                <input type="email" 
+                       id="email"
+                       name="email" 
+                       placeholder="example@gmail.com" 
+                       required 
+                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                       title="Please enter a valid email address (e.g., name@example.com)">
+                <span class="error-message">Please enter a valid email address</span>
+            </div>
+
+            <!-- Phone field - Required -->
+            <div class="input-box">
+                <label for="phone">Enter your phone number <span class="required">*</span></label>
+                <input type="tel" 
+                       id="phone"
+                       name="phone" 
+                       placeholder="Enter your phone number" 
+                       required 
+                       pattern="[0-9]{10}"
+                       maxlength="10"
+                       title="Please enter a 10-digit phone number">
+                <span class="error-message">Please enter a valid 10-digit phone number</span>
+            </div>
+
+            <div class="column">
+                <div class="input-box">
+                    <label for="birthdate">Birth Date</label>
+                    <input type="date" id="birthdate" name="birthdate" title="Select your birth date">
+                </div>
+            </div>
+
+            <!-- Address -->
+            <div class="input-box">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" placeholder="Enter your address" title="Please enter your address">
+            </div>
+
+            <div class="input-box">
+                <label for="nicImage" title="Upload an Image of the NIC (PNG JPG or JPEG only)">Upload an Image of the NIC (PNG JPG or JPEG only)</label>
+                <input type="file" id="nicImage" name="file" accept=".png, .jpg, .jpeg">
+            </div>
+
+            
+        </fieldset>
+
+        <fieldset>
+            <legend><h2>Feedback Details</h2></legend>
+            <div class="input-box">
+                <label title="Was this website informative?">Was this website informative?</label>
+                <div class="radio-group">
+                    <label for="informativeYes">
+                        <input type="radio" id="informativeYes" name="informative" value="Yes" title="Select Yes"> Yes
+                    </label>
+                    <label for="informativeNo">
+                        <input type="radio" id="informativeNo" name="informative" value="No" title="Select No"> No
+                    </label>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <label title="Select feedback aspect">Feedback Aspects</label>
+                <select id="feedbackAspects" name="feedbackAspects" title="Select feedback aspect">
+                    <option value="" disabled selected>Select feedback aspect</option>
+                    <option value="websiteNavigation">Website Navigation</option>
+                    <option value="contentQuality">Content Quality</option>
+                    <option value="recommendations">Recommendations</option>
+                    <option value="overall">Overall</option>
+                </select>
+            </div>
+            
+            <div class="input-box">
+                <label>Comments</label>
+                <textarea id="comments" name="comments" maxlength="300" placeholder="Enter your comments" title="Enter your comments"></textarea>
+                <div id="charCount">300 characters remaining</div>
+            </div>
+
+            <div class="rating-box">
+                <label title="Rate Us">Rate Us:</label>
+                <div class="rating" id="ratingStars">
+                    <button class="emoji" type="button" title=" 1 Star">⭐</button>
+                    <button class="emoji" type="button" title=" 2 Star">⭐</button>
+                    <button class="emoji" type="button" title=" 3 Star">⭐</button>
+                    <button class="emoji" type="button" title=" 4 Star">⭐</button>
+                    <button class="emoji" type="button" title=" 5 Star">⭐</button>
+                </div>
+            </div>
+
+            <!-- Date and Time - Required -->
+            <div class="input-box">
+                <label for="datetime" title="Select Date & Time">Select Date & Time</label>
+                <input type="datetime-local" 
+                       id="datetime"
+                       name="datetime" 
+                       value="2024-03-10T10:00"
+                       title="Please select a date and time">
+                <span class="error-message">Please select a date and time</span>
+            </div>
+
+
+            
+        </fieldset>
+
+        <div class="button-container">
+            <button type="submit" class="submit-button" title="Submit your feedback">Submit</button>
+            <button type="reset" class="reset-button" title="Reset the form">Reset</button>
+        </div>
+        
+    </form>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inline">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="pageEditor_ST3.html">Page Editor - Student 3</a></li>
+                    <li><a href="validation_ST3.html">Validation Page - Student 3</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Team Members</h4>
+                <ul>
+                    <li>Shenan Dimbukkuwalage</li>
+                    <li>Hiruna Ranawaka</li>
+                    <li>Poornisha Dissanayake</li>
+                    <li>Chanduli Gunawaradana</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("comments").addEventListener("input", function() {
+            var maxLength = 300;
+            var currentLength = this.value.length;
+            document.getElementById("charCount").textContent = (maxLength - currentLength) + " characters remaining";
+        });
+    </script>
+    
+</body>
+</html>

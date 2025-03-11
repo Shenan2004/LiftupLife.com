@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiftupLives|Sitemap</title>
+    <link rel="icon" type="image/png" href="images/logoW.png">
+    <link rel="stylesheet" href="css/Global.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            width: 100%;
+            min-height: calc(100vh - 140px); /* Adjusted to account for header and nav */
+        }
+
+        .sitemap-container {
+            background-color: white;
+            padding: 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        /* Add responsive styles */
+        @media screen and (max-width: 1200px) {
+            .sitemap-container {
+                padding: 15px;
+                margin: 0 15px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .sitemap-container {
+                padding: 10px;
+                margin: 0 10px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .sitemap-container {
+                padding: 5px;
+                margin: 0 5px;
+            }
+        }
+
+        @media screen and (max-width: 640px) {
+            .node text {
+                font-size: 12px;
+            }
+            .home-node text {
+                font-size: 14px;
+            }
+        }
+
+        .node rect.bg {
+            fill: white;
+            stroke: none;
+        }
+        .node rect.fg {
+            fill: #2196F3;
+            stroke: #1976D2;
+            stroke-width: 2;
+            transition: fill 0.3s;
+        }
+        .node:hover rect.fg, .node:focus rect.fg {
+            fill: purple;
+            cursor: pointer;
+            outline: none;
+            stroke: white;
+        }
+        .node text {
+            fill: white;
+            font-size: 16px;
+            text-anchor: middle;
+            dominant-baseline: middle;
+            font-weight: 500;
+            pointer-events: none;
+        }
+        .connector {
+            stroke: #1976D2;
+            stroke-width: 2;
+            opacity: 0.6;
+        }
+        .home-node rect.fg {
+            fill: #1565C0;
+            stroke: #0D47A1;
+        }
+        .home-node text {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .validation-node rect.fg {
+            fill: #00BCD4;
+            stroke: #0097A7;
+        }
+        .editor-node rect.fg {
+            fill: #00BCD4;
+            stroke: #0097A7;
+        }
+        a {
+            cursor: pointer;
+            outline: none;
+        }
+        a:focus {
+            outline: 2px solid #1976D2;
+            outline-offset: 4px;
+            border-radius: 6px;
+        }
+
+        .node title {
+            font-size: 12px;
+            fill: #333;
+        }
+
+        .node[focusable]:focus {
+            outline: 2px solid #1976D2;
+            outline-offset: 2px;
+        }
+
+        @media (hover: none) and (pointer: coarse) {
+            .node rect.fg {
+                stroke-width: 3;
+            }
+            .node:active rect.fg {
+                fill: purple;
+            }
+            .connector {
+                stroke-width: 3;
+            }
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .main-content {
+                padding: 10px;
+                margin-top: 0;
+                min-height: calc(100vh - 100px);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .main-content {
+                padding: 5px;
+                min-height: calc(100vh - 100px); /* Adjusted for mobile screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+          <img src="images/logoW.png" alt="Website Icon" />
+          <h1>LiftupLives</h1>
+        </div>
+        <div class="header-right">
+          <a href="profile.html">User Profile</a>
+        </div>
+    </header>
+  
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="home.html">Table</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+    </nav>
+
+
+
+    <div class="main-content">
+        <div class="sitemap-container" role="navigation" aria-label="Website Sitemap">
+            <svg width="100%" height="100%" viewBox="0 0 2000 700" preserveAspectRatio="xMidYMid meet">
+              
+                <path class="connector" d="M800,90 L800,140"/> 
+                <path class="connector" d="M800,180 L800,220"/>
+                <path class="connector" d="M800,220 L130,220"/>
+                <path class="connector" d="M800,220 L330,220"/>
+                <path class="connector" d="M800,220 L530,220"/>
+                <path class="connector" d="M800,220 L730,220"/>
+                <path class="connector" d="M800,220 L930,220"/>
+                <path class="connector" d="M800,220 L1130,220"/>
+                
+                <path class="connector" d="M130,220 L130,270"/>
+                <path class="connector" d="M330,220 L330,270"/>
+                <path class="connector" d="M530,220 L530,270"/>
+                <path class="connector" d="M730,220 L730,270"/>
+                <path class="connector" d="M930,220 L930,270"/>
+                <path class="connector" d="M1130,220 L1130,270"/>
+
+                <path class="connector" d="M800,220 L1300,220"/>
+                <path class="connector" d="M800,220 L1500,220"/>
+                <path class="connector" d="M800,220 L1700,220"/>
+                <path class="connector" d="M1300,220 L1300,270"/>
+                <path class="connector" d="M1500,220 L1500,270"/>
+                <path class="connector" d="M1700,220 L1700,270"/>
+
+                <path class="connector" d="M1300,270 L1300,450"/>
+
+                <path class="connector" d="M1300,270 L1320,270"/>
+                <path class="connector" d="M1300,330 L1320,330"/>
+                <path class="connector" d="M1300,390 L1320,390"/>
+                <path class="connector" d="M1300,450 L1320,450"/>
+
+
+                <path class="connector" d="M1500,270 L1500,450"/>
+
+                <path class="connector" d="M1500,270 L1520,270"/>
+                <path class="connector" d="M1500,330 L1520,330"/>
+                <path class="connector" d="M1500,390 L1520,390"/>
+                <path class="connector" d="M1500,450 L1520,450"/>
+
+ 
+                <path class="connector" d="M1700,270 L1700,450"/>
+ 
+                <path class="connector" d="M1700,270 L1720,270"/>
+                <path class="connector" d="M1700,330 L1720,330"/>
+                <path class="connector" d="M1700,390 L1720,390"/>
+                <path class="connector" d="M1700,450 L1720,450"/>
+
+            
+                <a href="splash.html" tabindex="0" role="link" aria-label="Navigate to Splash Screen">
+                    <g class="node home-node" transform="translate(730,50)" focusable="true">
+                        <title>Go to Splash Screen</title>
+                        <rect class="bg" width="140" height="40" rx="5" ry="5" />
+                        <rect class="fg" width="140" height="40" rx="5" ry="5" />
+                        <text x="70" y="20">Splash Screen</text>
+                    </g>
+                </a>
+
+                
+                <a href="home.html" tabindex="0" role="link" aria-label="Navigate to Home Page">
+                    <g class="node home-node" transform="translate(730,140)" focusable="true">
+                        <title>Go to Home Page</title>
+                        <rect class="bg" width="140" height="40" rx="5" ry="5" />
+                        <rect class="fg" width="140" height="40" rx="5" ry="5" />
+                        <text x="70" y="20">Home</text>
+                    </g>
+                </a>
+
+                
+                <a href="volunteer.html" tabindex="0" role="link" aria-label="Navigate to Volunteering Page">
+                    <g class="node" transform="translate(130,270)" focusable="true">
+                        <title>Go to Volunteering Page</title>
+                        <rect class="bg" width="140" height="40" rx="5" ry="5" />
+                        <rect class="fg" width="140" height="40" rx="5" ry="5" />
+                        <text x="70" y="20">Volunteering</text>
+                    </g>
+                </a>
+
+                <a href="table.html" tabindex="0" role="link" aria-label="Navigate to Table Page">
+                    <g class="node" transform="translate(330,270)" focusable="true">
+                        <title>Go to Table Page</title>
+                        <rect class="bg" width="140" height="40" rx="5" ry="5" />
+                        <rect class="fg" width="140" height="40" rx="5" ry="5" />
+                        <text x="70" y="20">Table</text>
+                    </g>
+                </a>
+
+                <a href="profile.html" tabindex="0" role="link" aria-label="Navigate to User Profile Page">
+                    <g class="node" transform="translate(530,270)" focusable="true">
+                        <title>Go to User Profile Page</title>
+                        <rect class="bg" width="140" height="40" rx="5" ry="5" />
+                        <rect class="fg" width="140" height="40" rx="5" ry="5" />
+                        <text x="70" y="20">User Profile</text>
+                    </g>
+                </a>
+
+                <a href="feedback.html" tabindex="0" role="link" aria-label="Navigate to Feedback Page">
+                    <g class="node" transform="translate(730,270)" focusable="true">
+                        <title>Go to Feedback Page</title>
+                        <rect class="bg" width="140" height="40" rx="5" ry="5" />
+                        <rect class="fg" width="140" height="40" rx="5" ry="5" />
+                        <text x="70" y="20">Feedback</text>
+                    </g>
+                </a>
+
+                <a href="sitemap.html" tabindex="0" role="link" aria-label="Navigate to Sitemap Page">
+                    <g class="node" transform="translate(930,270)" focusable="true">
+                        <title>Go to Sitemap Page</title>
+                        <rect class="bg" width="140" height="40" rx="5" ry="5" />
+                        <rect class="fg" width="140" height="40" rx="5" ry="5" />
+                        <text x="70" y="20">Sitemap</text>
+                    </g>
+                </a>
+
+                <a href="team.html" tabindex="0" role="link" aria-label="Navigate to Team Page">
+                    <g class="node" transform="translate(1130,270)" focusable="true">
+                        <title>Go to Team Page</title>
+                        <rect class="bg" width="140" height="40" rx="5" ry="5" />
+                        <rect class="fg" width="140" height="40" rx="5" ry="5" />
+                        <text x="70" y="20">Team</text>
+                    </g>
+                </a>
+
+                
+                <a href="content_ST1.html" tabindex="0" role="link" aria-label="Navigate to Content 01 Page">
+                    <g class="node" transform="translate(1320,270)" focusable="true">
+                        <title>Go to Content Page</title>
+                        <rect class="bg" width="140" height="40" rx="5" ry="5" />
+                        <rect class="fg" width="140" height="40" rx="5" ry="5" />
+                        <text x="70" y="20">Content 01</text>
+                    </g>
+                </a>
+
+                <a href="content_ST2.html" tabindex="0" role="link" aria-label="Navigate to Content 02 Page">
+                    <g class="node" transform="translate(1320,330)" focusable="true">
+                        <title>Go to Content 02 Page</title>
+                        <rect class="bg" width="140" height="40" rx="5" ry="5" />
+                        <rect class="fg" width="140" height="40" rx="5" ry="5" />
+                        <text x="70" y="20">Content 02</text>
+                    </g>
+                </a>
+
+                <a href="content_ST3.html" tabindex="0" role="link" aria-label="Navigate to Content 03 Page">
+                    <g class="node" transform="translate(1320,390)" focusable="true">
+                        <title>Go to Content 03 Page</title>
+                        <rect class="bg" width="140" height="40" rx="5" ry="5" />
+                        <rect class="fg" width="140" height="40" rx="5" ry="5" />
+                        <text x="70" y="20">Content 03</text>
+                    </g>
+                </a>
+
+                <a href="content_ST4.html" tabindex="0" role="link" aria-label="Navigate to Content 04 Page">
+                    <g class="node" transform="translate(1320,450)" focusable="true">
+                        <title>Go to Content 04 Page</title>
+                        <rect class="bg" width="140" height="40" rx="5" ry="5" />
+                        <rect class="fg" width="140" height="40" rx="5" ry="5" />
+                        <text x="70" y="20">Content 04</text>
+                    </g>
+                </a>
+
+            
+                <a href="pageEditor_ST1.html" tabindex="0" role="link" aria-label="Navigate to Page Editor 01">
+                    <g class="node" transform="translate(1520,270)" focusable="true">
+                        <title>Go to Page Editor 01</title>
+                        <rect class="bg" width="140" height="40" rx="5" ry="5" />
+                        <rect class="fg" width="140" height="40" rx="5" ry="5" />
+                        <text x="70" y="20">Page Editor 01</text>
+                    </g>
+                </a>
+
+                <a href="pageEditor_ST2.html" tabindex="0" role="link" aria-label="Navigate to Page Editor 02">
+                    <g class="node" transform="translate(1520,330)" focusable="true">
+                        <title>Go to Page Editor 02</title>
+                        <rect class="bg" width="140" height="40" rx="5" ry="5" />
+                        <rect class="fg" width="140" height="40" rx="5" ry="5" />
+                        <text x="70" y="20">Page Editor 02</text>
+                    </g>
+                </a>
+
+                <a href="pageEditor_ST3.html" tabindex="0" role="link" aria-label="Navigate to Page Editor 03">
+                    <g class="node" transform="translate(1520,390)" focusable="true">
+                        <title>Go to Page Editor 03</title>
+                        <rect class="bg" width="140" height="40" rx="5" ry="5" />
+                        <rect class="fg" width="140" height="40" rx="5" ry="5" />
+                        <text x="70" y="20">Page Editor 03</text>
+                    </g>
+                </a>
+
+                <a href="pageEditor_ST4.html" tabindex="0" role="link" aria-label="Navigate to Page Editor 04">
+                    <g class="node" transform="translate(1520,450)" focusable="true">
+                        <title>Go to Page Editor 04</title>
+                        <rect class="bg" width="140" height="40" rx="5" ry="5" />
+                        <rect class="fg" width="140" height="40" rx="5" ry="5" />
+                        <text x="70" y="20">Page Editor 04</text>
+                    </g>
+                </a>
+
+            
+                <a href="validation_ST1.html" tabindex="0" role="link" aria-label="Navigate to Validation 01">
+                    <g class="node" transform="translate(1720,270)" focusable="true">
+                        <title>Go to Validation 01</title>
+                        <rect class="bg" width="140" height="40" rx="5" ry="5" />
+                        <rect class="fg" width="140" height="40" rx="5" ry="5" />
+                        <text x="70" y="20">Validation 01</text>
+                    </g>
+                </a>
+
+                <a href="validation_ST2.html" tabindex="0" role="link" aria-label="Navigate to Validation 02">
+                    <g class="node" transform="translate(1720,330)" focusable="true">
+                        <title>Go to Validation 02</title>
+                        <rect class="bg" width="140" height="40" rx="5" ry="5" />
+                        <rect class="fg" width="140" height="40" rx="5" ry="5" />
+                        <text x="70" y="20">Validation 02</text>
+                    </g>
+                </a>
+
+                <a href="validation_ST3.html" tabindex="0" role="link" aria-label="Navigate to Validation 03">
+                    <g class="node" transform="translate(1720,390)" focusable="true">
+                        <title>Go to Validation 03</title>
+                        <rect class="bg" width="140" height="40" rx="5" ry="5" />
+                        <rect class="fg" width="140" height="40" rx="5" ry="5" />
+                        <text x="70" y="20">Validation 03</text>
+                    </g>
+                </a>
+
+                <a href="validation_ST4.html" tabindex="0" role="link" aria-label="Navigate to Validation 04">
+                    <g class="node" transform="translate(1720,450)" focusable="true">
+                        <title>Go to Validation 04</title>
+                        <rect class="bg" width="140" height="40" rx="5" ry="5" />
+                        <rect class="fg" width="140" height="40" rx="5" ry="5" />
+                        <text x="70" y="20">Validation 04</text>
+                    </g>
+                </a>
+            </svg>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-inline">
+            <div>
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="pageEditor_ST4.html">Page Editor - Student 4</a></li>
+                    <li><a href="validation_ST4.html">Validation page - Student 4</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Members</h4>
+                <div>Shenan Dimbukkuwalage</div>
+                <div>Hiruna Ranawaka</div>
+                <div>Poornisha Dissanayake</div>
+                <div>Chanduli Gunawaradana</div>
+              </div>
+        </div>
+    </footer>
+
+    <script>
+        function updateSVGSize() {
+            const container = document.querySelector('.sitemap-container');
+            const svg = container.querySelector('svg');
+            const aspectRatio = 2000 / 700; 
+            
+            
+            const containerWidth = container.clientWidth;
+            const newHeight = containerWidth / aspectRatio;
+            
+            
+            svg.style.width = containerWidth + 'px';
+            svg.style.height = newHeight + 'px';
+        }
+
+        
+        window.addEventListener('load', updateSVGSize);
+        window.addEventListener('resize', updateSVGSize);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[role="link"]');
+            
+            links.forEach(link => {
+                
+                link.addEventListener('keydown', handleKeyPress);
+                const node = link.querySelector('.node');
+                if (node) {
+                    node.addEventListener('keydown', handleKeyPress);
+                }
+            });
+
+            function handleKeyPress(e) {
+                
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    
+                    const link = e.target.closest('a');
+                    if (link) {
+                        
+                        const clickEvent = new MouseEvent('click', {
+                            bubbles: true,
+                            cancelable: true,
+                            view: window
+                        });
+                        link.dispatchEvent(clickEvent);
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
